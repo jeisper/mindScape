@@ -2,7 +2,6 @@ import { Box, Button, Flex, Heading, Text, Textarea } from '@chakra-ui/react';
 import React from 'react';
 import SideMenu from './SideMenu';
 import { useState } from 'react';
-import { Document, Page } from 'react-pdf';
 import { useNavigate } from 'react-router-dom';
 
 function Generator() {

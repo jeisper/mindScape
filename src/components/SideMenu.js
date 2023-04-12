@@ -7,7 +7,7 @@ import {
   UnorderedList,
 } from '@chakra-ui/react';
 import React from 'react';
-import { CgProfile } from 'react-icons/cg';
+import { useNavigate } from 'react-router-dom';
 
 const certification = ['AWS Certified Solutions Architect', 'Google Analytics'];
 const projects = ['Portfolio', 'Tic Tac Toe', '+'];
@@ -24,6 +24,7 @@ const skills = [
 ];
 
 function SideMenu() {
+  const navigate = useNavigate();
   return (
     <Flex
       display="flex"
@@ -33,6 +34,7 @@ function SideMenu() {
       pt="10"
       fontSize="15"
       w="30%"
+      h="200vh"
       bg="gray.100"
     >
       <Flex
@@ -47,6 +49,9 @@ function SideMenu() {
         borderRadius="10"
         color="white"
         bg=" linear-gradient(177deg, rgba(241,151,3,1) 9%, rgba(199,72,0,1) 94%)"
+        onClick={() => {
+          navigate('/');
+        }}
       >
         <Image
           w="100px"
