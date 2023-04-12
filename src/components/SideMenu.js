@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box, Flex, ListItem, Text, UnorderedList } from '@chakra-ui/react';
 import React from 'react';
 import { CgProfile } from 'react-icons/cg';
 
@@ -20,7 +20,15 @@ const skills = ['JavaScript', 'React', 'Node', 'Express', 'MongoDB', 'SQL'];
 
 function SideMenu() {
   return (
-    <Flex display="flex" flexDir="column" ml="10" mt="10" fontSize="30" w="30%">
+    <Flex
+      display="flex"
+      flexDir="column"
+      pl="10"
+      pt="10"
+      fontSize="15"
+      w="30%"
+      bgGradient="linear(to-b, orange.200, orange.500)"
+    >
       <Flex
         justifyContent="center"
         alignItems="center"
@@ -29,70 +37,40 @@ function SideMenu() {
         fontSize="25"
       >
         <CgProfile size="100" />
-        <Text fontWeight="bold">Sanat</Text>
+        <Text fontWeight="bold">Amy</Text>
       </Flex>
-      <Flex display="flex" flexDir="column" my="3">
+      <Flex display="flex" flexDir="column" my="1">
         <Text fontWeight="bold">Course</Text>
         <Text fontSize="15">Computer Science International</Text>
       </Flex>
-      <Flex display="flex" flexDir="column" my="3">
+      <Flex display="flex" flexDir="column" my="1">
         <Text fontWeight="bold">Work Experience:</Text>
         <Flex display="flex" flexWrap="wrap">
-          {workExp.map(workExp => {
-            return (
-              <Box
-                m="1"
-                px="2"
-                borderRadius="10"
-                shadow="md"
-                fontSize="15"
-                bg="gray.200"
-                w="fit-content"
-              >
-                {workExp}
-              </Box>
-            );
-          })}
+          <UnorderedList>
+            {workExp.map(workExp => {
+              return <ListItem fontSize="15"> {workExp}</ListItem>;
+            })}
+          </UnorderedList>
         </Flex>
       </Flex>
-      <Flex display="flex" flexDir="column" my="3">
+      <Flex display="flex" flexDir="column" my="1">
         <Text fontWeight="bold">Certifications:</Text>
         <Flex display="flex" flexWrap="wrap">
-          {certification.map(certification => {
-            return (
-              <Box
-                m="1"
-                px="2"
-                borderRadius="10"
-                shadow="md"
-                fontSize="15"
-                bg="gray.200"
-                w="fit-content"
-              >
-                {certification}
-              </Box>
-            );
-          })}
+          <UnorderedList>
+            {certification.map(certification => {
+              return <ListItem fontSize="15">{certification}</ListItem>;
+            })}
+          </UnorderedList>
         </Flex>
       </Flex>
       <Flex display="flex" flexDir="column" my="3">
         <Text fontWeight="bold">Projects:</Text>
         <Flex display="flex" flexWrap="wrap">
-          {projects.map(projects => {
-            return (
-              <Box
-                m="1"
-                px="2"
-                borderRadius="10"
-                shadow="md"
-                fontSize="15"
-                bg="gray.200"
-                w="fit-content"
-              >
-                {projects}
-              </Box>
-            );
-          })}
+          <UnorderedList>
+            {projects.map(projects => {
+              return <ListItem fontSize="15">{projects}</ListItem>;
+            })}
+          </UnorderedList>
         </Flex>
       </Flex>
       <Flex display="flex" flexDir="column" my="3">
