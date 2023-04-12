@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Box,
   Heading,
@@ -11,9 +11,17 @@ import {
 } from "@chakra-ui/react";
 import { CheckIcon, WarningIcon } from "@chakra-ui/icons";
 
-const StudentReport = () => {
+const StudentReport = ({showReport}) => {
   const strengths = ["Projects", "Entrepreneurship", "Teamwork"];
   const weaknesses = ["AWS Certification", "Kubernetes", "Docker"];
+
+  useEffect(() => {
+    console.log("useReport has changed: ", showReport);
+  }, [showReport]);
+
+  if (!showReport) {
+    return <></>;
+  }
 
   return (
     <VStack spacing={6} alignItems="flex-start" w="full">

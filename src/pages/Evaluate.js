@@ -12,13 +12,13 @@ function Evaluate() {
     <Flex w="100%" display="flex" flexDir="row" h="900px">
       <SideMenu />
       <Flex w="100%" h="100%" display="flex" flexDir="column">
-        <Flex w="100%" h="100%" bg="gray.100">
+        <Flex w="100%" h="100%"  mb="15">
           <DescriptionEvaluate showReport={showReport} setShowReport={setShowReport}/>
         </Flex>
-        <Flex w="100%" h="100%" bg="gray.100">
-          <SummaryEvaluate />
+        <Flex w="100%" h="100%" mt="10">
+          <SummaryEvaluate showReport={showReport}/>
         </Flex>
-        <Flex px="10" pb="20" w="100%" h="100%" bg="gray.100">
+        <Flex px="10" pb="20" w="100%" h="100%" >
           <EvalReport showReport={showReport}/>
         </Flex>
       </Flex>
