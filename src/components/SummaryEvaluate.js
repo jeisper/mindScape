@@ -1,5 +1,5 @@
-import { Box, Flex, Text } from '@chakra-ui/react';
-import React from 'react';
+import { Box, Flex, Heading, Text } from '@chakra-ui/react';
+import React, { useEffect } from 'react';
 
 const tech = [
   'JavaScript',
@@ -36,7 +36,15 @@ const culture = [
   'Company Culture',
 ];
 
-function SummaryEvaluate() {
+function SummaryEvaluate({showReport}) {
+  useEffect(() => {
+    console.log("useReport has changed: ", showReport);
+  }, [showReport]);
+
+  if (!showReport) {
+    return <></>;
+  }
+
   return (
     <Flex
       display="flex"
@@ -48,9 +56,7 @@ function SummaryEvaluate() {
       justify="center"
       justifyItems="center"
     >
-      <Text fontWeight="bold" fontSize="20">
-        Insight:
-      </Text>
+     <Heading size="lg">Student Report</Heading>
       <Flex display="flex" flexDir="column">
         <Flex display="flex" flexDir="row">
           <Flex display="flex" flexDir="column" my="3" mr="10">
@@ -95,7 +101,7 @@ function SummaryEvaluate() {
           </Flex>
         </Flex>
         <Flex display="flex" flexDir="column" my="3">
-          <Text fontWeight="bold">Experiency:</Text>
+          <Text fontWeight="bold">Experience Requirement:</Text>
           <Flex display="flex" flexWrap="wrap">
             {exp.map(exp => {
               return (
