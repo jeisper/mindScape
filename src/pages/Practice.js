@@ -108,10 +108,17 @@ function Practice() {
           <Box
             w="100%"
             mt="4"
+            h="300px"
             fontSize="md"
             as={CodeMirror}
             bg="red"
-            src="test"
+            value={`import React from 'react'
+export default function test() {
+return (
+<div>test</div>
+)
+}
+`}
             options={{
               mode: 'javascript',
               src:"test",
