@@ -2,10 +2,11 @@ import { Box, Button, Flex, Heading, Text, Textarea } from '@chakra-ui/react';
 import React from 'react';
 import SideMenu from './SideMenu';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Generator() {
   const cvs = ['Workday', 'Google', 'Amazon', 'Facebook', 'Apple'];
-  const [showCV, setShowCV] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <Flex h="100vh" w="100%" flexDir="row">
@@ -47,7 +48,15 @@ function Generator() {
           placeholder="Paste job description here"
         ></Textarea>
 
-        <Button mt="4" w="150px" p="2" bg="orange.300" onClick={() => {}}>
+        <Button
+          mt="4"
+          w="150px"
+          p="2"
+          bg="orange.300"
+          onClick={() => {
+            navigate('/cv.pdf');
+          }}
+        >
           Generate
         </Button>
       </Flex>
