@@ -14,7 +14,6 @@ function Landing() {
     >
       <SideMenu />
       <MainSection />
-      <Flex>Empty 2</Flex>
     </Flex>
   );
 }
