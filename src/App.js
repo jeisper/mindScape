@@ -1,12 +1,13 @@
 import React from 'react';
 import { ChakraProvider, theme, Flex } from '@chakra-ui/react';
 import Landing from './pages/Landing';
+import Evaluate from './pages/Evaluate';
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
       <Flex>
-        <Landing />
+        <Evaluate />
       </Flex>
     </ChakraProvider>
   );
