@@ -13,8 +13,8 @@ function Landing() {
       w="100%"
     >
       <SideMenu />
+
       <MainSection />
-      <Flex>Empty 2</Flex>
     </Flex>
   );
 }
