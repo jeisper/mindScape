@@ -11,11 +11,13 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 import { Search2Icon } from '@chakra-ui/icons';
+import { useNavigate } from 'react-router-dom';
 
 function PracticeSection() {
+  const navigate = useNavigate();
   const courses = [
     {
-      name: 'Mobile Development',
+      name: 'Web Development',
       category: 'Exercise',
     },
     {
@@ -69,6 +71,9 @@ function PracticeSection() {
               fontSize="15"
               bg="white"
               w="fit-content"
+              onClick={() => {
+                navigate('/practice/Webdev');
+              }}
             >
               {course.category}
             </Box>

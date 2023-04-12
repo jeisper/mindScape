@@ -1,7 +1,7 @@
 import { Button, Flex, Text, Textarea } from '@chakra-ui/react';
 import React from 'react';
 
-function DescriptionEvaluate({showReport, setShowReport}) {
+function DescriptionEvaluate({ showReport, setShowReport }) {
   return (
     <Flex
       display="flex"
@@ -16,7 +16,16 @@ function DescriptionEvaluate({showReport, setShowReport}) {
         Job Description:
       </Text>
       <Textarea h="80%" w="90%" my="5" border="1px solid black" />
-      <Button display="flex" alignItems="center" bg="blue.200" w="fit-content" onClick={()=>{console.log(showReport); setShowReport(!showReport)}}>
+      <Button
+        display="flex"
+        alignItems="center"
+        bg="orange.300"
+        w="fit-content"
+        onClick={() => {
+          console.log(showReport);
+          setShowReport(!showReport);
+        }}
+      >
         Evaluate
       </Button>
     </Flex>
