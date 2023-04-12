@@ -25,14 +25,16 @@ function PracticeSection() {
     <Flex px="10" pb="10" flexDir="column">
       <Heading>Practice</Heading>
 
-      <Flex>
+      <Flex display="flex" flexWrap="wrap">
         {courses.map(course => (
           <Flex
             key={course.name}
-            w="100%"
+            w="45%"
             h="100%"
             bg="blue.300"
             m="2"
+            justifyContent="center"
+            alignItems="center"
             borderRadius="20"
             boxShadow="lg"
             flexDir="column"

@@ -30,7 +30,13 @@ const workExp = [
 function SideMenu() {
   return (
     <Flex display="flex" flexDir="column" ml="10" mt="10" fontSize="30" w="30%">
-      <Flex ml="5" display="flex" flexDir="column" fontSize="25">
+      <Flex
+        justifyContent="center"
+        alignItems="center"
+        display="flex"
+        flexDir="column"
+        fontSize="25"
+      >
         <CgProfile size="100" />
         <Text fontWeight="bold"> Givago</Text>
       </Flex>
