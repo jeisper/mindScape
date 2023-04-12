@@ -14,26 +14,26 @@ function Practice() {
 
   const securityCourse = [
     {
-      title: 'Task 1',
-      description: 'Description 1',
+      title: 'Create a calculator',
+      description: 'Create a calculator: Build a simple calculator using HTML, CSS, and JavaScript. Allow users to perform basic arithmetic operations like addition, subtraction, multiplication, and division. You can add more advanced features like scientific calculations and history.',
       exerciseStarterCode: 'Exercise 1',
       solution: 'Solution 1',
     },
     {
-      title: 'Task 2',
-      description: 'Description 2',
+      title: 'Create a slider ',
+      description: 'Create a slider: Build an image slider using HTML, CSS, and JavaScript. Allow users to navigate between images using arrows or dots. You can also add features like automatic scrolling, captions, and transition effects.',
       exerciseStarterCode: 'Exercise 2',
       solution: 'Solution 2',
     },
     {
-      title: 'Task 3',
-      description: 'Description 3',
+      title: 'Create a todo list',
+      description: 'Build a todo list: Create a todo list using HTML, CSS, and JavaScript. Allow users to add, remove, and mark tasks as complete. You can also add features like due dates, priority, and categories.',
       exerciseStarterCode: 'Exercise 3',
       solution: 'Solution 3',
     },
     {
-      title: 'Task 4',
-      description: 'Description 4',
+      title: 'create a weather app',
+      description: 'Build a weather app: Create a weather app using HTML, CSS, and JavaScript. Allow users to enter a city name and display the current weather conditions. You can also add features like hourly and daily forecasts, weather alerts, and a search history.',
       exerciseStarterCode: 'Exercise 4',
       solution: 'Solution 4',
     },
@@ -43,7 +43,7 @@ function Practice() {
     <Flex w="100%" h="100vh" flexDir="column" p="10" bg="orange.300">
       <Flex w="100%" pos="relative" py="3" mb="2">
         <Heading pos="absolute" mb="10">
-          {id}
+          {"Web Dev"}
         </Heading>
         <Flex w="100%" align="center" justify="center">
           <Button
@@ -111,8 +111,10 @@ function Practice() {
             fontSize="md"
             as={CodeMirror}
             bg="red"
+            src="test"
             options={{
               mode: 'javascript',
+              src:"test",
               theme: 'material',
               lineNumbers: true,
             }}
